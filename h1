@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        section {
+            margin-bottom: 40px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .container {
+            display: flex;
+            background-color: #f8f9fa;
+            border: 2px solid #007bff;
+            padding: 10px;
+            margin: 10px 0;
+            min-height: 100px;
+        }
+
+        .item {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 3px;
+            text-align: center;
+            flex: 0 0 auto;
+        }
+
+        /* Specific styles for each property demonstration */
+
+        /* Display: flex */
+        .display-flex {
+            display: flex;
+        }
+
+        /* Flex-direction */
+        .flex-direction-row {
+            flex-direction: row;
+        }
+
+        .flex-direction-column {
+            flex-direction: column;
+            height: 200px;
+        }
+
+        /* Flex-wrap */
+        .flex-wrap-wrap {
+            flex-wrap: wrap;
+            width: 300px;
+        }
+
+        /* Flex-flow */
+        .flex-flow-column-wrap {
+            flex-flow: column wrap;
+            height: 200px;
+        }
+
+        /* Justify-content */
+        .justify-content-space-between {
+            justify-content: space-between;
+        }
+
+        .justify-content-center {
+            justify-content: center;
+        }
+
+        .justify-content-space-around {
+            justify-content: space-around;
+        }
+
+        .justify-content-space-evenly {
+            justify-content: space-evenly;
+        }
+
+        /* Align-items */
+        .align-items-center {
+            align-items: center;
+            height: 150px;
+        }
+
+        .align-items-stretch {
+            align-items: stretch;
+            height: 150px;
+        }
+
+        .align-items-flex-start {
+            align-items: flex-start;
+            height: 150px;
+        }
+
+        .align-items-flex-end {
+            align-items: flex-end;
+            height: 150px;
+        }
+
+        .align-items-baseline {
+            align-items: baseline;
+            height: 150px;
+        }
+
+        /* Align-content */
+        .align-content-space-between {
+            align-content: space-between;
+            flex-wrap: wrap;
+            height: 200px;
+        }
+
+        .align-content-center {
+            align-content: center;
+            flex-wrap: wrap;
+            height: 200px;
+        }
+
+        .align-content-space-around {
+            align-content: space-around;
+            flex-wrap: wrap;
+            height: 200px;
+        }
+
+        .align-content-space-evenly {
+            align-content: space-evenly;
+            flex-wrap: wrap;
+            height: 200px;
+        }
+
+        .align-content-stretch {
+            align-content: stretch;
+            flex-wrap: wrap;
+            height: 200px;
+        }
+
+        .align-content-flex-start {
+            align-content: flex-start;
+            flex-wrap: wrap;
+            height: 200px;
+        }
+
+        .align-content-flex-end {
+            align-content: flex-end;
+            flex-wrap: wrap;
+            height: 200px;
+        }
+
+        /* Order */
+        .order-demo {
+            /* No additional styles needed, order is set inline */
+        }
+
+        /* Flex-grow */
+        .flex-grow-demo {
+            /* No additional styles needed, flex-grow is set inline */
+        }
+
+        /* Flex-shrink */
+        .flex-shrink-demo {
+            width: 200px; /* Force shrinking */
+        }
+
+        /* Flex-basis */
+        .flex-basis-demo {
+            /* No additional styles needed, flex-basis is set inline */
+        }
+
+        /* Flex */
+        .flex-demo {
+            /* No additional styles needed, flex is set inline */
+        }
+
+        /* Align-self */
+        .align-self-demo {
+            align-items: flex-start;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Flexbox Examples</h1>
+    <p>This page demonstrates all CSS Flexbox properties with examples.</p>
+
+    <!-- Display: Flex -->
+    <section>
+        <h2>1. display: flex</h2>
+        <p>Defines a flex container.</p>
+        <div class="container display-flex">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+    </section>
+
+    <!-- Flex-Direction -->
+    <section>
+        <h2>2. flex-direction</h2>
+        <p>Defines the direction of the main axis.</p>
+        <h3>Row</h3>
+        <div class="container flex-direction-row">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+        <h3>Column</h3>
+        <div class="container flex-direction-column">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+    </section>
+
+    <!-- Flex-Wrap -->
+    <section>
+        <h2>3. flex-wrap</h2>
+        <p>Specifies whether flex items should wrap.</p>
+        <div class="container flex-wrap-wrap">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+        </div>
+    </section>
+
+    <!-- Flex-Flow -->
+    <section>
+        <h2>4. flex-flow</h2>
+        <p>Shorthand for flex-direction and flex-wrap.</p>
+        <div class="container flex-flow-column-wrap">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+    </section>
+
+    <!-- Justify-Content -->
+    <section>
+        <h2>5. justify-content</h2>
+        <p>Aligns flex items along the main axis.</p>
+        <h3>Space Between</h3>
+        <div class="container justify-content-space-between">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+        <h3>Center</h3>
+        <div class="container justify-content-center">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+        <h3>Space Around</h3>
+        <div class="container justify-content-space-around">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+        <h3>Space Evenly</h3>
+        <div class="container justify-content-space-evenly">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+    </section>
+
+    <!-- Align-Items -->
+    <section>
+        <h2>6. align-items</h2>
+        <p>Aligns flex items along the cross axis.</p>
+        <h3>Center</h3>
+        <div class="container align-items-center">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+        <h3>Stretch</h3>
+        <div class="container align-items-stretch">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+        <h3>Flex Start</h3>
+        <div class="container align-items-flex-start">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+        <h3>Flex End</h3>
+        <div class="container align-items-flex-end">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+        <h3>Baseline</h3>
+        <div class="container align-items-baseline">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+    </section>
+
+    <!-- Align-Content -->
+    <section>
+        <h2>7. align-content</h2>
+        <p>Aligns flex lines when there is extra space in the cross axis.</p>
+        <h3>Space Between</h3>
+        <div class="container align-content-space-between">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+        <h3>Center</h3>
+        <div class="container align-content-center">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+        <h3>Space Around</h3>
+        <div class="container align-content-space-around">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+        <h3>Space Evenly</h3>
+        <div class="container align-content-space-evenly">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+        <h3>Stretch</h3>
+        <div class="container align-content-stretch">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+        <h3>Flex Start</h3>
+        <div class="container align-content-flex-start">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+        <h3>Flex End</h3>
+        <div class="container align-content-flex-end">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+    </section>
+
+    <!-- Order -->
+    <section>
+        <h2>8. order</h2>
+        <p>Controls the order of flex items.</p>
+        <div class="container order-demo">
+            <div class="item" style="order: 3;">Item 1 (order: 3)</div>
+            <div class="item" style="order: 1;">Item 2 (order: 1)</div>
+            <div class="item" style="order: 2;">Item 3 (order: 2)</div>
+        </div>
+    </section>
+
+    <!-- Flex-Grow -->
+    <section>
+        <h2>9. flex-grow</h2>
+        <p>Defines how much a flex item will grow.</p>
+        <div class="container flex-grow-demo">
+            <div class="item" style="flex-grow: 1;">Item 1 (grow: 1)</div>
+            <div class="item" style="flex-grow: 2;">Item 2 (grow: 2)</div>
+            <div class="item" style="flex-grow: 1;">Item 3 (grow: 1)</div>
+        </div>
+    </section>
+
+    <!-- Flex-Shrink -->
+    <section>
+        <h2>10. flex-shrink</h2>
+        <p>Defines how much a flex item will shrink.</p>
+        <div class="container flex-shrink-demo">
+            <div class="item" style="flex-shrink: 1;">Item 1 (shrink: 1)</div>
+            <div class="item" style="flex-shrink: 0;">Item 2 (shrink: 0)</div>
+            <div class="item" style="flex-shrink: 1;">Item 3 (shrink: 1)</div>
+        </div>
+    </section>
+
+    <!-- Flex-Basis -->
+    <section>
+        <h2>11. flex-basis</h2>
+        <p>Sets the initial size of a flex item.</p>
+        <div class="container flex-basis-demo">
+            <div class="item" style="flex-basis: 100px;">Item 1 (basis: 100px)</div>
+            <div class="item" style="flex-basis: 200px;">Item 2 (basis: 200px)</div>
+            <div class="item" style="flex-basis: 150px;">Item 3 (basis: 150px)</div>
+        </div>
+    </section>
+
+    <!-- Flex -->
+    <section>
+        <h2>12. flex</h2>
+        <p>Shorthand for flex-grow, flex-shrink, and flex-basis.</p>
+        <div class="container flex-demo">
+            <div class="item" style="flex: 1 1 100px;">Item 1 (flex: 1 1 100px)</div>
+            <div class="item" style="flex: 2 1 200px;">Item 2 (flex: 2 1 200px)</div>
+            <div class="item" style="flex: 1 1 150px;">Item 3 (flex: 1 1 150px)</div>
+        </div>
+    </section>
+
+    <!-- Align-Self -->
+    <section>
+        <h2>13. align-self</h2>
+        <p>Allows individual flex items to override align-items.</p>
+        <div class="container align-self-demo">
+            <div class="item">Item 1</div>
+            <div class="item" style="align-self: flex-end;">Item 2 (align-self: flex-end)</div>
+            <div class="item">Item 3</div>
+        </div>
+    </section>
+</body>
+</html>
